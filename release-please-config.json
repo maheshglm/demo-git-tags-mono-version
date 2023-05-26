@@ -1,0 +1,38 @@
+{
+  "bootstrap-sha": "5f630bb5305e826037104de97ec2b61eaab3f96a",
+  "pull-request-title-pattern": "chore: release${component} ${version}",
+  "group-pull-request-title-pattern": "chore: release ${branch}",
+  "release-type": "simple",
+  "packages": {
+    "api": {
+      "release-type": "simple",
+      "draft": false,
+      "prerelease": false,
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "package-name": "api"
+    },
+    "misc": {
+      "release-type": "simple",
+      "draft": false,
+      "prerelease": false,
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "package-name": "misc"
+    },
+    "web": {
+      "release-type": "simple",
+      "draft": false,
+      "prerelease": true,
+      "bump-minor-pre-major": false,
+      "bump-patch-for-minor-pre-major": false,
+      "package-name": "web"
+    }
+  },
+  "plugins": [
+    {
+      "type": "cargo-workspace",
+      "merge": true
+    }
+  ]
+}

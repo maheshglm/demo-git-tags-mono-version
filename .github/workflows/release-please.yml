@@ -1,0 +1,39 @@
+name: release-please
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - ".release-please-manifest.json"
+      
+jobs:
+  release-please:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: google-github-actions/release-please-action@v3
+        id: release
+        with:
+          command: manifest
+          monorepo-tags: true
+          token: ${{ secrets.RELEASE_PLEASE_PAT }}
+          
+      - name: print outputs
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          echo ${{toJSON(steps.release.outputs)}}
+
+      - name: print tags
+        if: ${{ steps.release.outputs.release_created }}
+        run: |
+          echo ${{ steps.release.outputs.api--tag_name }}
+          echo ${{ steps.release.outputs.api--version }}
+          echo ${{ steps.release.outputs.misc--tag_name }}
+          echo ${{ steps.release.outputs.misc--version }}
+          echo ${{ steps.release.outputs.web--tag_name }}
+          echo ${{ steps.release.outputs.web--version }}
+          
+
+
+

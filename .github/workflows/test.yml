@@ -1,0 +1,16 @@
+name: test
+
+on:
+  workflow_dispatch:
+
+jobs:
+  example_matrix:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+       version: [{"field1":"banana", "field2":"kiwi", "field3":"orange"}, {"field1":"sushi", "field2":"french tacos", "field3":"paracetamol"}]
+    steps:
+     -  name: print
+        run: |
+         echo ${{ matrix.version.field1 }}
+         echo ${{ matrix.version.field2 }}
