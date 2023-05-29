@@ -1,0 +1,45 @@
+name: CI pipeline
+
+on: 
+  push:
+    branches:
+      - main
+    paths:
+      - "api/**"
+      - "misc/**"
+      - "web/**"
+  pull_request:
+    types: [opened, synchronize, reopened]
+    branches:
+      - main
+    paths:
+      - "api/**"
+      - "misc/**"
+      - "web/**"
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+       - uses: actions/checkout@v3
+       - name: disaply content
+         run: |
+            cat api/api.txt
+            cat web/web.txt
+            cat misc/misc.txt
+
+       - name: run on main branch
+         if: github.ref == 'refs/heads/main'
+         run: |
+            echo "Building main branch"
+            cat api/api.txt
+            cat web/web.txt
+            cat misc/misc.txt
+      
+       - name: run on develop branch
+         if: github.ref == 'refs/heads/develop'
+         run: |
+            echo "Building develop branch"
+            cat api/api.txt
+            cat web/web.txt
+            cat misc/misc.txt
