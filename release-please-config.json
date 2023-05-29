@@ -1,0 +1,17 @@
+{
+    "group-pull-request-title-pattern": "chore: release ${branch}",
+    "pull-request-title-pattern": "chore: release${component} ${version}",
+    "bootstrap-sha": "",
+    "packages": {
+      "artifact": {
+        "release-type": "simple",
+        "package-name": "artifact"
+      }
+    },
+    "plugins": [
+      {
+        "type": "cargo-workspace",
+        "merge": true
+      }
+    ]
+  }
