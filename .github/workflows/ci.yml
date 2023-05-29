@@ -37,9 +37,9 @@ jobs:
             cat misc/misc.txt
       
        - name: run on develop branch
-         if: github.ref == 'refs/heads/develop'
+         if: github.ref != 'refs/heads/main'
          run: |
-            echo "Building develop branch"
+            echo "Building non main branch"
             cat api/api.txt
             cat web/web.txt
             cat misc/misc.txt
