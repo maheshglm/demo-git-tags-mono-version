@@ -5,8 +5,6 @@ on:
   push:
     branches:
       - main
-    paths:
-      - ".release-please-manifest.json"
       
 jobs:
   release-please:
@@ -16,24 +14,9 @@ jobs:
         id: release
         with:
           command: manifest
+          version-file: version.txt
           monorepo-tags: true
           token: ${{ secrets.RELEASE_PLEASE_PAT }}
-          
-      - name: print outputs
-        if: ${{ steps.release.outputs.release_created }}
-        run: |
-          echo ${{toJSON(steps.release.outputs)}}
-
-      - name: print tags
-        if: ${{ steps.release.outputs.release_created }}
-        run: |
-          echo ${{ steps.release.outputs.api--tag_name }}
-          echo ${{ steps.release.outputs.api--version }}
-          echo ${{ steps.release.outputs.misc--tag_name }}
-          echo ${{ steps.release.outputs.misc--version }}
-          echo ${{ steps.release.outputs.web--tag_name }}
-          echo ${{ steps.release.outputs.web--version }}
-          
 
 
 
