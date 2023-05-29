@@ -16,7 +16,7 @@ jobs:
           package-name: artifact
           release-type: simple
           command: manifest
-          monorepo-tags: true
+          monorepo-tags: false
           token: ${{ secrets.RELEASE_PLEASE_PAT }}
 
 

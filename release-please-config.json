@@ -1,11 +1,10 @@
 {
     "group-pull-request-title-pattern": "chore: release ${branch}",
     "pull-request-title-pattern": "chore: release${component} ${version}",
-    "bootstrap-sha": "",
+    "bootstrap-sha": "4e9b7ee2ab8bedb1465fec887dea6c4660f4104b",
     "packages": {
-      "artifact": {
-        "release-type": "simple",
-        "package-name": "artifact"
+      ".": {
+        "release-type": "simple"
       }
     },
     "plugins": [
