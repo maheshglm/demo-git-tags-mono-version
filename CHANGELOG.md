@@ -1,5 +1,17 @@
 # Changelog
 
+## [1.2.0](https://github.com/maheshglm/demo-git-tags-mono-version/compare/v1.1.0...v1.2.0) (2023-05-30)
+
+
+### Features
+
+* setup prereqs ([fc7321d](https://github.com/maheshglm/demo-git-tags-mono-version/commit/fc7321d73fc0a36dcc4b98057f2fb968426d8ded))
+
+
+### Bug Fixes
+
+* updated ci pipeline ([6fec74f](https://github.com/maheshglm/demo-git-tags-mono-version/commit/6fec74f746981d335093d61723a7df21e4a83b66))
+
 ## [1.1.0](https://github.com/maheshglm/demo-git-tags-mono-version/compare/v1.0.0...v1.1.0) (2023-05-29)
 
 
