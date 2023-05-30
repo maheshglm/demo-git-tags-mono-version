@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.2.2](https://github.com/maheshglm/demo-git-tags-mono-version/compare/v1.2.1...v1.2.2) (2023-05-30)
+
+
+### Bug Fixes
+
+* cleanup ([a594d10](https://github.com/maheshglm/demo-git-tags-mono-version/commit/a594d10847522921a50c603a8c4e80e220dc834c))
+
 ## [1.2.1](https://github.com/maheshglm/demo-git-tags-mono-version/compare/v1.2.0...v1.2.1) (2023-05-30)
 
 
