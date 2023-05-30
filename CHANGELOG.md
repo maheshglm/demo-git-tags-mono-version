@@ -1,5 +1,18 @@
 # Changelog
 
+## [1.3.0](https://github.com/maheshglm/demo-git-tags-mono-version/compare/v1.2.1...v1.3.0) (2023-05-30)
+
+
+### Features
+
+* updated all projects ([8689e52](https://github.com/maheshglm/demo-git-tags-mono-version/commit/8689e52846e3963f64225bf6185d1c2113e0f281))
+
+
+### Bug Fixes
+
+* cleanup ([a594d10](https://github.com/maheshglm/demo-git-tags-mono-version/commit/a594d10847522921a50c603a8c4e80e220dc834c))
+* updated misc and api ([b4187ed](https://github.com/maheshglm/demo-git-tags-mono-version/commit/b4187edb0d73e2b61de6925c0994cd9eef8bb25f))
+
 ## [1.2.1](https://github.com/maheshglm/demo-git-tags-mono-version/compare/v1.2.0...v1.2.1) (2023-05-30)
 
 
